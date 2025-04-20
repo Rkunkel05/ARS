@@ -1,0 +1,359 @@
+/* ---------- FONTS ---------- */
+
+  @font-face { 
+    font-family:Barrio;
+    src: url('../fonts/Barrio-Regular.ttf');
+}
+
+@font-face { 
+    font-family:Barriciecito;
+    src: url('../fonts/Barriecito-Regular.ttf');
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes iconZoomUp {
+    0% {
+        transform: scale(0.3) translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ---------- MAIN PAGE ITEMS ---------- */
+body {
+    background-color:#fbe4d3;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+  .image-text-container {
+    position: relative;
+    width: 300px;
+  }
+
+  .img-text-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-family: 'Barrio';
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .overlay-text button, .overlay-text span {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+
+button {
+    font-size: 20px;
+    color: white;
+    background-color: #76B3D0;
+    border: 2px solid#76B3D0;
+    border-radius: 25px;
+    font-family: 'Barriciecito';
+    letter-spacing: 0.2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(185, 185, 185);
+    border: 2px solid rgb(185, 185, 185);
+    transition-duration:500ms
+}
+
+centered {
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #76B3D0;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 25px;
+    border-color: #76B3D0;
+    width: 50%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-content pre {
+    color:white;
+    font-family:Barriciecito;
+    letter-spacing:2px;
+    font-size:25px;
+}
+
+/* ---------- IPOD ITEMS ---------- */
+
+.iPod-box {
+    margin: 0 auto;
+    width: 400px; 
+    height: 600px; 
+    background-color: #76B3D0;
+    border-radius: 15px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 60px;
+    justify-content: space-between;
+}
+
+.display-screen {
+    margin-top: 1px;
+    width: 300px; 
+    height: 152px; 
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px; 
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.display-screen pre {
+    margin-top: 10px;
+    font-family: 'Barriciecito';
+    font-size: 30px;
+    color: #76B3D0;
+}
+
+.play-button:hover, .skip-button:hover, .menu-button:hover {
+    background-color: #c4c4c4;
+    border: 2px solid #c4c4c4;
+    transition-duration:500ms;
+    cursor:pointer;
+}
+
+.select-button:hover {
+    background-color: #4e8198;
+    border: 2px solid #4e8198;
+    transition-duration:500ms;
+    cursor:pointer;
+}
+
+#menu-button {
+    height:50px; 
+    width: 50px;
+    background-color: white;
+    border:2px solid white;
+    border-radius: 50%;
+    display: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #76B3D0;
+    font-family:'Barriciecito';
+    top:10%;
+    position:relative;
+}
+
+.play-button {
+    height:50px; 
+    width: 50px;
+    background-color: white;
+    border:2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #76B3D0;
+}
+
+.skip-button {
+    height:50px; 
+    width: 50px;
+    background-color: white;
+    border:2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #76B3D0;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.circle {
+    height:250px; 
+    width: 250px; 
+    background-color: white;
+    border:2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.select-button {
+    height:100px; 
+    width: 100px; 
+    background-color: #76B3D0;
+    border:2px solid white;
+    border-radius: 250px; 
+}
+
+/* ---------- FUNKY WAVY LINE ---------- */
+
+/* HTML: <div class="wavy-line"></div> */
+.wavy-line {
+    --s: 40px; /* size of the wave */
+    --b: 10px; /* thickness of the line */
+    --m: .3; /* curvature of the wave [0 2] */
+    
+    background: #76B3D0;
+    --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+    height: calc(2*var(--R));
+    width: 100%;
+    --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+    mask:
+      radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) 
+       calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+      radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)),var(--_g)) 
+       50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+  }
+
+/* ---------- SPLASH SCREEN ---------- */
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#76B3D0;
+    z-index: 200;
+    text-align: center;
+    line-height: 50vh;
+    transition: opacity 0.5s ease, z-index 0s 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash.display-none {
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 0.5s ease, z-index 0s 0.5s;
+}
+
+h2.logo-animation {
+    color: #fbe4d3;
+    font-size: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    top: 0px;
+}
+
+.logo-animation .icon {
+    opacity: 0;
+    transform: scale(0.3) translateY(100px);
+    animation: iconZoomUp 1s ease-out forwards;
+}
+
+.logo-animation .text {
+    opacity: 0;
+    animation: fadeInText 1s ease-in forwards;
+    font-family: Barrio;
+    animation-delay: 1s;
+}
+
+.logo-animation .info {
+    font-size: 40px;
+    font-weight: 400;
+    font-family:Barriciecito;
+    opacity: 0;
+    animation: fadeInText 1s ease-in forwards;
+    animation-delay: 2s; 
+    text-transform: none;
+}
+
+/* PLAYLIST PAGES */
+
+h1 {
+    font-family: 'Barrio';
+    color: #76B3D0;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.songs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.song1, song2 {
+    width: 25%;
+    color: #76B3D0;
+    align-items: center;
+    justify-content: center;
+}
+
+.song1 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.song2 {
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#backgroundGif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 25%;
+}

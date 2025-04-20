@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>MyMusic.MP3</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- Splash screen-->
+    <div class="splash">
+        <h2 class="logo-animation"> 
+            <span class="icon">&#9833;</span>
+            <span class="text">MyMusic.MP3</span>
+        <br>
+        <span class="info">What am I listening to?</span>
+        </h2>
+    </div>
+
+    <!-- Header text + links -->
+    <div class="header">
+        <div class="image-text-container">
+            <img src="images/header.svg" alt="freeform blob">
+            <div class="overlay-text">
+                <!-- Pop up window with details on what each button does -->
+                 <button onclick="guide()">How to Navigate</button>
+                 <h1 style="text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5); color: white;">My Music.MP3</h1>
+                 <a href="https://open.spotify.com/user/warrior_28?si=2adf61fcee7f4b16" target="_blank">
+                <button>Spotify</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="guide" class="dropdown-content" style="display:none">
+        <pre><h3>Here's how to navigate this website!</h3>
+&#9197; changes to the next song/playlist 
+
+&#9198; goes back to the previous song/playlist
+
+&#9679; and &#9654; will select the current playlist
+</pre>
+    </div>
+    
+</br>
+
+    <!-- iPod object -->
+    <div class="iPod-box">
+        <div class="display-screen" id="display"></div> 
+
+        <div class="button-row">
+            <div class="skip-button" onclick="previousSong()"> &#9198;</div>
+            <!-- can we override spotify's play button? -->
+            <div class="play-button" onclick="selectSong()">&#9654;</div>
+            <div class="skip-button" onclick="nextSong()">&#9197;</div>
+        </div>
+
+        <div class="circle">
+            <div class="select-button" onclick="selectSong()">
+            </div>
+        </div>
+
+    </div>
+
+</br>
+
+    <button onclick="suggest()">Suggest a Song!</button>
+
+    <div id="suggest" class="dropdown-content" style="display:none">
+        <form action="php/action_page.php" method="post">
+            <label for="sname" style="font-family:Barriciecito; color:white">Song name:</label><br>
+            <input type="text" id="sname" name="sname" value="Song Name"><br><br>
+            <label for="link" style="font-family:Barriciecito; color:white">Spotify link:</label><br>
+            <input type="text" id="link" name="link" value=""><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+
+    <br><br>
+
+    <div class = "wavy-line"></div> 
+
+    <p style="text-align: center; color: gray; font-size: 25px; font-family:Barriciecito; opacity:50%;" id="demo"></p>
+
+    <script src="js/mainpage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+// date for the bottom of the screen
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("demo").innerHTML = "@Rachel Kunkel " + year;
+
+// ipod player music!
+const playlists = [ {
+    name: "What am I listening to?", url: "#"},
+    {name: "Rainy Day", url: "playlists/playlist1.html"},
+    {name: "Playlist2", url: "playlists/playlist2.html"},
+    {name: "Playlist3", url: "playlists/playlist3.html"},
+    {name: "Playlist4", url: "playlists/playlist4.html"},
+    {name: "Playlist5", url: "playlists/playlist5.html"},
+];
+
+let currentIndex = 0;
+const display = document.getElementById("display");
+
+display.innerHTML = playlists[currentIndex];
+
+function updateDisplay() {
+    const track = playlists[currentIndex];
+    display.innerHTML = `<a href="${track.url}" target="_blank" style="color:#76B3D0; font-family:Barriciecito; text-decoration:none;">
+        <h2>${track.name}</h2>
+    </a>`;
+}
+
+updateDisplay();
+
+function nextSong() {
+    if (currentIndex < playlists.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateDisplay();
+}
+
+function previousSong() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = playlists.length - 1;
+    }
+    updateDisplay();
+}
+
+function selectSong() {
+    window.open(playlists[currentIndex].url, '_blank');
+}
+// make splash screen fade
+// get .splash div
+const splash = document.querySelector('.splash');
+// wait until DOM content has loaded, then trigger this event...
+document.addEventListener('DOMContentLoaded', (event)=>{
+    // wait 6s until we change the splash to the css "display-none"
+    setTimeout(()=> {
+        splash.classList.add('display-none');
+    }, 6000);
+});
+
+function guide() {
+    var x = document.getElementById("guide");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function suggest() {
+    var x = document.getElementById("suggest");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
