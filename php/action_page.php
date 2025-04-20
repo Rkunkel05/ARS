@@ -23,7 +23,7 @@ $songs[] = [
 file_put_contents($filepath,json_encode($songs, JSON_PRETTY_PRINT));
 ?>
 <h1> Successfully submitted! </h2>
-<h2> <a href='../mainPage.html'>Back to main page</a></h2>
+<h2> <a href='../index.html'>Back to main page</a></h2>
 
 </body>
 </html>
