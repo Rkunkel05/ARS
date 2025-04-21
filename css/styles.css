@@ -325,11 +325,19 @@ h1 {
 
 .songs {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
     width: 100%;
 }
 
-.song1, song2 {
+.songs2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.song1, .song2,.song3,.song4 {
     width: 25%;
     color: #76B3D0;
     align-items: center;
@@ -342,9 +350,18 @@ h1 {
 }
 
 .song2 {
-    margin-top: 100px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 300px;
+}
+
+.song3 {
+    margin-top: 10px;
+    margin-left: 600px;
+}
+
+.song4 {
+    margin-top: 10px;
+    margin-left: 900px;
 }
 
 #backgroundGif {
@@ -356,4 +373,12 @@ h1 {
     object-fit: cover;
     z-index: -1;
     opacity: 25%;
+}
+
+#customCursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    width: 32px;
+    height: 32px;
 }

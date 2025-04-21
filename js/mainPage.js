@@ -6,9 +6,9 @@ document.getElementById("demo").innerHTML = "@Rachel Kunkel " + year;
 // ipod player music!
 const playlists = [ {
     name: "What am I listening to?", url: "#"},
-    {name: "Rainy Day", url: "playlists/playlist1.html"},
-    {name: "Playlist2", url: "playlists/playlist2.html"},
-    {name: "Playlist3", url: "playlists/playlist3.html"},
+    {name: "rainy day", url: "playlists/playlist1.html"},
+    {name: "ooo yeah bust a move!", url: "playlists/playlist2.html"},
+    {name: "driving w/ my windows down", url: "playlists/playlist3.html"},
     {name: "Playlist4", url: "playlists/playlist4.html"},
     {name: "Playlist5", url: "playlists/playlist5.html"},
 ];
@@ -33,6 +33,7 @@ function nextSong() {
     } else {
         currentIndex = 0;
     }
+    document.getElementById('clickSound').play();
     updateDisplay();
 }
 
@@ -42,10 +43,12 @@ function previousSong() {
     } else {
         currentIndex = playlists.length - 1;
     }
+    document.getElementById('clickSound').play();
     updateDisplay();
 }
 
 function selectSong() {
+    document.getElementById('clickSound').play();
     window.open(playlists[currentIndex].url, '_blank');
 }
 // make splash screen fade
