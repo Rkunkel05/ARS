@@ -23,6 +23,18 @@
 
     <script src="../js/mainpage.js"></script>
 
+
+    <audio id="rainAudio" loop>
+        <source src="../images/rain.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Workaround w/ browsers blocking autoplay , basically wait for DOM to load and user to click to play-->
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            document.body.addEventListener("click", function () {
+              document.getElementById("rainAudio").play();
+            }, { once: true });
+          });
+    </script>
     <img src="../images/raingif.gif" id="backgroundGif">
 
 </body>

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>literally 97.1fm the drive</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "../css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:black;">
+
+    <!-- Why won't this link work? -->
+    <h1"><a href=“https://live.wdrv.com/listen/” style="color:white; font-family: 'Barrio'; font-size: 4rem; text-align: center; margin: 0;">literally 97.1fm the drive</a></h1>
+
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2Di0qFNb7ATroCGB3q0Ka7?utm_source=generator" width="50%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6eN1f9KNmiWEhpE2RhQqB5?utm_source=generator" width="75%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5RsUlxLto4NZbhJpqJbHfN?utm_source=generator" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5QTxFnGygVM4jFQiBovmRo?utm_source=generator" width="75%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3ItzRpwvKtkDSNdRSjXu7Z?utm_source=generator" width="50%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <audio id="cityAudio" loop>
+        <source src="../images/city.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Workaround w/ browsers blocking autoplay , basically wait for DOM to load and user to click to play-->
+    <script>
+        let audio = document.getElementById("cityAudio");
+        audio.volume = 0.2;
+
+        window.addEventListener("DOMContentLoaded", function () {
+            document.body.addEventListener("click", function () {
+              document.getElementById("cityAudio").play();
+            }, { once: true });
+          });
+    </script>
+
+    <img src="../images/city.gif" id="backgroundGif">
+
+</body>
+</html>

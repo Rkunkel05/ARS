@@ -31,6 +31,16 @@
     }
 }
 
+.drivingText {
+    animation: slide-in 0.5s forwards;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slide-in {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+
 /* ---------- MAIN PAGE ITEMS ---------- */
 body {
     background-color:#fbe4d3;

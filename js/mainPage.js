@@ -9,8 +9,8 @@ const playlists = [ {
     {name: "rainy day", url: "playlists/playlist1.html"},
     {name: "ooo yeah bust a move!", url: "playlists/playlist2.html"},
     {name: "driving w/ my windows down", url: "playlists/playlist3.html"},
-    {name: "Playlist4", url: "playlists/playlist4.html"},
-    {name: "Playlist5", url: "playlists/playlist5.html"},
+    {name: "homework", url: "playlists/playlist4.html"},
+    {name: "literally 97.1fm the drive", url: "playlists/playlist5.html"},
 ];
 
 let currentIndex = 0;
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', (event)=>{
 
 function guide() {
     var x = document.getElementById("guide");
+    document.getElementById('clickSound').play();
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -73,6 +74,7 @@ function guide() {
 
 function suggest() {
     var x = document.getElementById("suggest");
+    document.getElementById('clickSound').play();
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
