@@ -8,10 +8,6 @@
     
     <h1 style = "color: white;"">homework</h1>
 
-    <!-- Somehow get the archway to border the whole page or at least the header?-->
-    <!-- <img src="../images/archway.png" stye="width:100%; height:100%; object-fit: cover; position: fixed;"> -->
-
-    <!-- Horizontal scroll...? Like a book? -->
     <div class="songs">
         <div class="song1"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/71fRQ8qijUz5fWT8uFydwV?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
         <div class="song1"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0eoHzI456z8FK5o0g7pdGn?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
@@ -20,10 +16,7 @@
         <div class="song1"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6z1APkc8qQnsLpeN7FCoZD?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
     </div>
 
-    <div class "container">
-        <div class "picture">
-            <img alt="Music Notes" id="musicNotes" class="musicNotes" style="display:none" src="../images/musicnotes.gif"/>
-        </div>
+    <div class = "picture" id="picture">
     </div>
 
     <script>
@@ -32,6 +25,11 @@
         function userClicked() {
             var x = event.clientX;
             var y = event.clientY;
+
+            insertImage = document.getElementById('picture');
+            insertImage.innerHTML = `
+            <img alt="Music Notes" id="musicNotes" class="musicNotes" style="display:none" src="../images/musicnotes.gif"/> `
+
             var musicNotes = document.getElementById("musicNotes");
 
             musicNotes.style.opacity = '100%';
@@ -42,7 +40,7 @@
             musicNotes.style.top = (y - musicNotes.height/2 ) + 'px';
             musicNotes.style.animation = "fade-out 2s forwards";
             setTimeout(() => {
-                musicNotes.style.opacity = '0%';
+                musicNotes.style.display = '';
             }, 2000)
         }
     </script>

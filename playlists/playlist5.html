@@ -6,7 +6,6 @@
 </head>
 <body style="background-color:black;">
 
-    <!-- Why won't this link work? -->
     <h1 ><a href="https://live.wdrv.com/listen/" target="_blank" style="color:white;">literally 97.1fm the drive</a></h1>;
     <p style="color: rgba(255, 255, 255, 0.547); font-family:Barriciecito; text-align:center; font-size:25px;">click the link above to listen to the station this is based on! (:</p>
 
@@ -19,6 +18,7 @@
     <audio id="cityAudio" loop>
         <source src="../images/city.mp3" type="audio/mpeg">
     </audio>
+    
     <!-- Workaround w/ browsers blocking autoplay , basically wait for DOM to load and user to click to play-->
     <script>
         let audio = document.getElementById("cityAudio");
