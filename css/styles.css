@@ -31,9 +31,13 @@
     }
 }
 
-.drivingText {
-    animation: slide-in 0.5s forwards;
-    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+@keyframes fade-out  {
+   from {
+    opacity: 100%;
+   }
+   to {
+    opacity: 0%;
+   }
 }
 
 @keyframes slide-in {
@@ -323,7 +327,7 @@ h2.logo-animation {
     text-transform: none;
 }
 
-/* PLAYLIST PAGES */
+/* ---------- PLAYLIST PAGES ---------- */
 
 h1 {
     font-family: 'Barrio';
@@ -374,6 +378,11 @@ h1 {
     margin-left: 900px;
 }
 
+.drivingText {
+    animation: slide-in 0.5s forwards;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 #backgroundGif {
     position: fixed;
     top: 0;
@@ -389,6 +398,11 @@ h1 {
     position: fixed;
     pointer-events: none;
     z-index: 10000;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+}
+
+.musicNotes {
+    width: 250px;
+    height: 250px;
 }

@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body style="background-color:#3A5683 !important; overflow:hiding;"">
+<body style="background-color:#3A5683 !important; overflow:hiding;">
+
+    <style>
+        body {
+            cursor: none;
+        }
+    </style>
+
+    <img src="../images/car.gif" id="customCursor" class="carCursor">
+
 
     <h1 style="color: white; text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4)" class="drivingText" id="drivingText"> driving w/ my windows down </h1>
 
@@ -22,6 +31,17 @@
     <p style="text-align: center; color: gray; font-size: 25px; font-family:Barriciecito; opacity:50%;" id="demo"></p>
 
     <script src="../js/mainpage.js"></script>
+    <script src="../js/playlist2.js"></script>
+
+
+    <audio id="clickSound" src="../images/car.mp3" preload="auto"></audio>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            document.body.addEventListener("click", function () {
+            document.getElementById("clickSound").play();
+            });
+        });
+    </script>
 
     <img src="../images/leaves.gif" id="backgroundGif">
 

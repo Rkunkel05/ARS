@@ -1,11 +1,11 @@
-// date for the bottom of the screen
+// Date for the bottom of the screen
 const d = new Date();
 let year = d.getFullYear();
 document.getElementById("demo").innerHTML = "@Rachel Kunkel " + year;
 
-// ipod player music!
-const playlists = [ {
-    name: "What am I listening to?", url: "#"},
+// Ipod player music!
+const playlists = [ 
+    {name: "What am I listening to?", url: "#"},
     {name: "rainy day", url: "playlists/playlist1.html"},
     {name: "ooo yeah bust a move!", url: "playlists/playlist2.html"},
     {name: "driving w/ my windows down", url: "playlists/playlist3.html"},
@@ -18,6 +18,7 @@ const display = document.getElementById("display");
 
 display.innerHTML = playlists[currentIndex];
 
+// Updates which playlist is being shown
 function updateDisplay() {
     const track = playlists[currentIndex];
     display.innerHTML = `<a href="${track.url}" target="_blank" style="color:#76B3D0; font-family:Barriciecito; text-decoration:none;">
@@ -27,6 +28,7 @@ function updateDisplay() {
 
 updateDisplay();
 
+// Displays the next song when next button is clicked
 function nextSong() {
     if (currentIndex < playlists.length - 1) {
         currentIndex++;
@@ -37,6 +39,7 @@ function nextSong() {
     updateDisplay();
 }
 
+// Displays the previous song when the previous button is clicked
 function previousSong() {
     if (currentIndex > 0) {
         currentIndex--;
@@ -47,10 +50,12 @@ function previousSong() {
     updateDisplay();
 }
 
+// opens the link associated with the playlist
 function selectSong() {
     document.getElementById('clickSound').play();
     window.open(playlists[currentIndex].url, '_blank');
 }
+
 // make splash screen fade
 // get .splash div
 const splash = document.querySelector('.splash');
@@ -62,6 +67,7 @@ document.addEventListener('DOMContentLoaded', (event)=>{
     }, 6000);
 });
 
+// opens the guide tab
 function guide() {
     var x = document.getElementById("guide");
     document.getElementById('clickSound').play();
@@ -72,6 +78,7 @@ function guide() {
     }
 }
 
+// opens the suggestions tab
 function suggest() {
     var x = document.getElementById("suggest");
     document.getElementById('clickSound').play();
